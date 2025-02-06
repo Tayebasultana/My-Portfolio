@@ -5,42 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>My Portfolio</title>
 </head>
 <body>
     <header>
-        <nav class="flex justify-between items-center bg-[#4B164C] px-2 md:px-7 lg:px-16 py-4 shadow-lg fixed top-0 w-full z-10 opacity-80">
+        <!-- Navigation Bar -->
+        <nav class="flex justify-between items-center bg-[#4B164C] px-4 md:px-7 lg:px-16 py-4 shadow-lg fixed top-0 w-full z-10 opacity-80">
             <!-- Logo Section -->
             <div class="text-white text-xl font-semibold">
-                <h3>My Logo</h3>
+                <h3 id="logo" class="font-italic">TAYEBA</h3>
             </div>
-
-            <!-- Navigation Links -->
-            <div>
+        
+            <!-- Navigation Links (For larger screens) -->
+            <div class="hidden md:flex">
                 <ul class="flex space-x-6">
-                    <li><a href="#home" class="text-white hover:text-blue-200 transition duration-300">Home</a></li>
-                    <li><a href="#about" class="text-white hover:text-blue-200 transition duration-300">About</a></li>
-                    <li><a href="#skills" class="text-white hover:text-blue-200 transition duration-300">Skills</a></li>
-                    <li><a href="#education" class="text-white hover:text-blue-200 transition duration-300">Education</a></li>
-                    <li><a href="#projects" class="text-white hover:text-blue-200 transition duration-300">Projects</a></li>
-                    <li><a href="#contact" class="text-white hover:text-blue-200 transition duration-300">Contact</a></li>
+                    <li><a href="#home" class="nav-link text-white hover:text-blue-200 transition duration-300">Home</a></li>
+                    <li><a href="#about" class="nav-link text-white hover:text-blue-200 transition duration-300">About</a></li>
+                    <li><a href="#skills" class="nav-link text-white hover:text-blue-200 transition duration-300">Skills</a></li>
+                    <li><a href="#education" class="nav-link text-white hover:text-blue-200 transition duration-300">Education</a></li>
+                    <li><a href="#projects" class="nav-link text-white hover:text-blue-200 transition duration-300">Projects</a></li>
+                    <li><a href="#contact" class="nav-link text-white hover:text-blue-200 transition duration-300">Contact</a></li>
                 </ul>
             </div>
-
+        
             <!-- Resume Button -->
-            <div>
+            <div class="hidden md:block">
                 <button class="btn bg-[#F8E7F6] text-black hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
                     Resume
                 </button>
             </div>
+
+            <!-- Hamburger Icon to Toggle Drawer (For small screens) -->
+            <div class="md:hidden">
+                <button id="drawer-toggle" class="text-white text-2xl">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      class="inline-block h-5 w-5 stroke-current">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        
+            <!-- Drawer (Hidden by default) -->
+        <div id="drawer" class="fixed inset-0 z-20 hidden">
+            <div class="bg-white w-64 h-full flex flex-col items-start pt-10 px-6">
+                <ul class="space-y-6">
+                    <li><a href="#home" class="nav-link text-black hover:text-blue-500" >Home</a></li>
+                    <li><a href="#about" class="nav-link text-black hover:text-blue-500">About</a></li>
+                    <li><a href="#skills" class="nav-link text-black hover:text-blue-500">Skills</a></li>
+                    <li><a href="#education" class="nav-link text-black hover:text-blue-500">Education</a></li>
+                    <li><a href="#projects" class="nav-link text-black hover:text-blue-500">Projects</a></li>
+                    <li><a href="#contact" class="nav-link text-black hover:text-blue-500">Contact</a></li>
+                    <li>
+                        <button class="btn bg-[#F8E7F6] text-black hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
+                            Resume
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
         </nav>
-        <section>
-            <div class="flex justify-center gap-16 items-center h-screen bg-[#F8E7F6]">
+        <!-- banner -->
+        <section id="home">
+            <div class="flex flex-col md:flex-row justify-center gap-16 px-4 items-center h-screen bg-[#F8E7F6]">
                 <div>
-                    <img src="../../images/medicalert-uk-uXB-7la5vqA-unsplash.jpg" alt="Profile Picture" class="h-96"/>
+                    <!-- <img src="../../images/1738842993321.jpg" alt="Profile Picture" class="h-96"/> -->
+                    <img src="../../images/1738842993306.jpg" alt="Profile Picture" class="h-96 md:h-96 lg:text-9xl"/>
                 </div>
                 <div>
-                    <h1 class="text-4xl font-semibold text-[#4B164C]">Hello, I'm John Doe</h1>
+                    <h1 class="text-4xl font-semibold text-[#4B164C]">Hello, I'm Tayeba Sultana</h1>
                     <p class="text-lg text-[#4B164C] my-2">I'm a <span class="font-bold">Frontend Developer</span></p>
                     <!-- Social Links -->
                     <div class="flex mt-6 space-x-6">
@@ -65,94 +104,337 @@
             </div>
         </section>
     </header>
+
     <main>
-        <section id="about" class="bg-white py-16">
+        <section id="about" class="bg-white py-20">
             <div class="container mx-auto">
                 <h2 class="text-3xl font-semibold text-[#4B164C] text-center">About Me</h2>
-                <p class="text-lg text-[#4B164C] text-center mt-4">I'm a Frontend Developer with 3 years of experience. I'm passionate about building responsive websites and web applications.</p>
+                <p class="text-lg text-[#4B164C] text-center mt-4">
+                    Hello! I'm Tayeba Sultana, a beginner Frontend Developer excited to start my journey in web development. My interest in coding began not long ago, and since then, I’ve been fully immersed in learning the basics of HTML, CSS, and JavaScript. While I’m new to the field, I’m passionate about creating responsive, user-friendly websites and eager to expand my knowledge and skills.
+                </p>
+                <p class="text-lg text-[#4B164C] text-center mt-4">
+                    I’ve spent a lot of time learning and experimenting with various web technologies, and I am particularly fascinated by the creative process behind frontend development. The idea of transforming a simple design into an interactive website really excites me, and I’m looking forward to building more projects and gaining practical experience in the field.
+                </p>
+                <p class="text-lg text-[#4B164C] text-center mt-4">
+                    When I'm not coding, I love spending my time outdoors – Gardening, trying my hand at painting. These hobbies help me stay inspired and keep my creativity flowing, which is important for my growth as a developer.Gardening improves patience and focus, while painting enhances creativity, both benefiting problem-solving and design skills for developers.
+                </p>
+                <p class="text-lg text-[#4B164C] text-center mt-4">
+                    I'm constantly learning, whether through online courses, tutorials, or experimenting with new projects. My goal is to continue developing my skills and eventually work on building meaningful, impactful websites and applications. I’m excited for the future and the opportunity to grow in this field!
+                </p>
             </div>
         </section>
 
-        <section id="skills" class="bg-[#4B164C] py-16">
+        <section id="skills" class="bg-[#4B164C] py-20">
             <div class="container mx-auto">
                 <h2 class="text-3xl font-semibold text-white text-center">My Skills</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
                     <!-- Skill 1 -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                         <div class="flex items-center justify-center mb-4">
-                            <i class="fas fa-code fa-3x text-[#4B164C]"></i>
+                            <img src="../../images/code.png" alt="" class="h-16"/>
                         </div>
                         <h3 class="text-[#4B164C] text-lg font-semibold text-center">HTML</h3>
-                        <p class="text-[#4B164C] mt-2 text-center">I have 3 years of experience in HTML.</p>
+                        <p class="text-[#4B164C] mt-2 text-center">I have experience with HTML and am learning its best practices.</p>
                     </div>
         
                     <!-- Skill 2 -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                         <div class="flex items-center justify-center mb-4">
-                            <i class="fas fa-paint-brush fa-3x text-[#4B164C]"></i>
+                            <img src="../../images/css.png" alt="" class="h-16"/>
                         </div>
                         <h3 class="text-[#4B164C] text-lg font-semibold text-center">CSS</h3>
-                        <p class="text-[#4B164C] mt-2 text-center">I have 3 years of experience in CSS.</p>
+                        <p class="text-[#4B164C] mt-2 text-center">I am learning CSS to create beautiful, responsive layouts.</p>
                     </div>
         
                     <!-- Skill 3 -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                         <div class="flex items-center justify-center mb-4">
-                            <i class="fas fa-code-branch fa-3x text-[#4B164C]"></i>
+                            <img src="../../images/javascript.png" alt="" class="h-16"/>
                         </div>
                         <h3 class="text-[#4B164C] text-lg font-semibold text-center">JavaScript</h3>
-                        <p class="text-[#4B164C] mt-2 text-center">I have 3 years of experience in JavaScript.</p>
+                        <p class="text-[#4B164C] mt-2 text-center">Currently learning JavaScript to create interactive web pages.</p>
                     </div>
         
                     <!-- Skill 4 -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                         <div class="flex items-center justify-center mb-4">
-                            <i class="fab fa-react fa-3x text-[#4B164C]"></i>
+                            <img src="../../images/atom.png" alt="" class="h-16"/>
                         </div>
                         <h3 class="text-[#4B164C] text-lg font-semibold text-center">React</h3>
-                        <p class="text-[#4B164C] mt-2 text-center">I have 3 years of experience in React.</p>
+                        <p class="text-[#4B164C] mt-2 text-center">I’m familiar with React and building single-page applications.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="bg-[#F8E7F6] py-16">
+        <section id="education">
+            <div class="bg-[#F8E7F6] py-20">
                 <h2 class="text-3xl font-semibold text-[#4B164C] text-center">Education</h2>
                 <div class="grid grid-cols-1 gap-6 mt-8">
-                    <!-- Education 1 -->
+                    <!-- Education 3: BBA Honours -->
                     <div class="bg-white w-fit mx-auto p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
                         <div class="flex items-center justify-center mb-4">
                             <i class="fas fa-graduation-cap fa-3x text-[#4B164C]"></i>
                         </div>
-                        <h3 class="text-[#4B164C] text-lg font-semibold text-center">Bachelor of Science</h3>
-                        <p class="text-[#4B164C] mt-2 text-center">I have completed my Bachelor of Science in Computer Science from ABC University.</p>
+                        <h3 class="text-[#4B164C] text-lg font-semibold text-center">BBA Honours in Accounting</h3>
+                        <p class="text-[#4B164C] mt-2 text-center">Currently pursuing my BBA Honours in Accounting from National University.</p>
+                        <p class="text-[#4B164C] text-center mt-2 font-medium">Expected Graduation: 2027</p>
+                    </div>
+                    <!-- Education 2: HSC -->
+                    <div class="bg-white w-fit mx-auto p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap fa-3x text-[#4B164C]"></i>
+                        </div>
+                        <h3 class="text-[#4B164C] text-lg font-semibold text-center">Higher Secondary Certificate (HSC)</h3>
+                        <p class="text-[#4B164C] mt-2 text-center">Completed my Higher study from Fenchuganj Govt College.</p>
+                        <p class="text-[#4B164C] text-center mt-2 font-medium">Graduated: 2023</p>
+                        <p class="text-[#4B164C] text-center mt-2 font-medium">Location: Fenchuganj, Sylhet</p>
+                    </div>
+                    <!-- Education 1: SSC -->
+                    <div class="bg-white w-fit mx-auto p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap fa-3x text-[#4B164C]"></i>
+                        </div>
+                        <h3 class="text-[#4B164C] text-lg font-semibold text-center">Secondary School Certificate (SSC)</h3>
+                        <p class="text-[#4B164C] mt-2 text-center">Completed my SSC from Kulaura Girls High School.</p>
                         <p class="text-[#4B164C] text-center mt-2 font-medium">Graduated: 2021</p>
-                    </div>
-                    
-                    <!-- Education 2 -->
-                    <div class="bg-white w-fit mx-auto p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
-                        <div class="flex items-center justify-center mb-4">
-                            <i class="fas fa-graduation-cap fa-3x text-[#4B164C]"></i>
-                        </div>
-                        <h3 class="text-[#4B164C] text-lg font-semibold text-center">Master of Science</h3>
-                        <p class="text-[#4B164C] mt-2 text-center">I am currently pursuing my Master of Science in Data Science from XYZ University.</p>
-                        <p class="text-[#4B164C] text-center mt-2 font-medium">Expected Graduation: 2024</p>
-                    </div>
-        
-                    <!-- Education 3 -->
-                    <div class="bg-white w-fit mx-auto p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
-                        <div class="flex items-center justify-center mb-4">
-                            <i class="fas fa-graduation-cap fa-3x text-[#4B164C]"></i>
-                        </div>
-                        <h3 class="text-[#4B164C] text-lg font-semibold text-center">Web Development Bootcamp</h3>
-                        <p class="text-[#4B164C] mt-2 text-center">Completed a full-stack web development bootcamp at ABC Academy.</p>
-                        <p class="text-[#4B164C] text-center mt-2 font-medium">Completed: 2023</p>
+                        <p class="text-[#4B164C] text-center mt-2 font-medium">Location: Kulaura, Moulvibazar, Sylhet</p>
                     </div>
                 </div>
             </div>
         </section>
         
+        <section id="projects">
+            <div class="bg-[#4B164C] py-20">
+                <h2 class="text-3xl font-semibold text-white text-center">Projects</h2>
+                <div class="grid grid-cols-1 gap-6 mt-8">
+                    <!-- Project 1 -->
+                    <div class="w-10/12 grid grid-cols-1 md:grid-cols-2 justify-items-center mx-auto bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 gap-6">
+                        <div class=" md:h-96 md:w-96 bg-blue-200 rounded-lg ">
+                            <img src="../../images/sylhet-package-3.png" alt="Tour of Dreams" class="h-full w-full object-cover rounded-lg"/>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-[#4B164C] text-lg font-bold">Tour Of Dreams</h3>
+                            <p class="text-[#4B164C] my-4">The TOUR OF DREAMS site is an online platform for travelers, offering comprehensive information on popular destinations in Bangladesh. The platform includes functionalities for tour bookings, profile management, and tour guide selection.</p>
+                            <ul class="text-[#4B164C]">
+                                <li>Authentication System (JWT, Google login)</li>
+                                <li>Admin, Tourist, and Tour Guide Roles</li>
+                                <li>Real-time notifications and sweet alerts</li>
+                            </ul>
+                            <div class="flex gap-4 my-4">
+                                <div>React</div>
+                                <div>Node.js</div>
+                                <div>MongoDB</div>
+                                <div>JWT Authentication</div>
+                            </div>
+                            <div class="flex gap-4 my-4">
+                                <a href="https://tour-of-dreams.web.app/" target="_blank" class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">View Live Project</a>
+                                <a href="https://github.com/Tayebasultana/Tour-of-Dreams-Client-Side" target="_blank" class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">GitHub Repository</a>
+                            </div>
+                            <a class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md" href="/TourProjectDetails.html">
+                                View more about this Project
+                              </a>
+                              
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="w-10/12 grid grid-cols-1 md:grid-cols-2 justify-items-center mx-auto bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 gap-6">
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-[#4B164C] text-lg font-bold">Visa Navigator</h3>
+                            <p class="text-[#4B164C] my-4">Visa Navigator is a platform that helps individuals navigate the complex process of obtaining visas for different countries. The platform provides information on required documents, application procedures, and offers a guide for each country’s visa requirements.</p>
+                            
+                            <ul class="text-[#4B164C]">
+                                <li>Authentication System (JWT, Google login)</li>
+                                <li>Admin, Tourist, and Guide Roles</li>
+                                <li>Real-time notifications and sweet alerts</li>
+                            </ul>
+                            
+                            <!-- Tech Stack -->
+                            <div class="flex gap-4 my-4">
+                                <div>React</div>
+                                <div>Node.js</div>
+                                <div>MongoDB</div>
+                                <div>JWT Authentication</div>
+                            </div>
+                            
+                            <!-- Buttons for Live Project and GitHub -->
+                            <div class="flex gap-4 my-4">
+                                <a href="https://visa-navigator-a94fc.web.app" target="_blank" class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
+                                    View Live Project
+                                </a>
+                                <a href="https://github.com/Tayebasultana/Visa-Navigator-Client-Side" target="_blank" class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
+                                    GitHub Repository
+                                </a>
+                            </div>
+                            
+                            <!-- Link to View More Details -->
+                            <a class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md" href="/VisaProjectDetails.html">
+                                View more about this Project
+                            </a>
+                        </div>
+                        <div class="md:h-96 md:w-96 bg-blue-200 rounded-lg">
+                            <img src="../../images/forsaken-films-7cfcCOOXsIo-unsplash.jpg" alt="Visa Navigator" class="h-full w-full object-cover rounded-lg"/>
+                        </div>
+                    </div>
+                    <!-- project 3 -->
+                    <div class="w-10/12 grid grid-cols-1 md:grid-cols-2 justify-items-center mx-auto bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 gap-6">
+                        <div class="md:h-96 md:w-96 bg-blue-200 rounded-lg">
+                            <img src="../../images/andrew-s-ouo1hbizWwo-unsplash.jpg " alt="Pet Adoption Website" class="h-full w-full object-cover rounded-lg"/>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-[#4B164C] text-lg font-bold">Pet Adoption Website</h3>
+                            <p class="text-[#4B164C] my-4">
+                                Pet Adoption Website is a platform designed to help families find and adopt their best friends. The platform showcases various pets, sorted by categories and prices, and allows users to view detailed information and start the adoption process.
+                            </p>
+                            <ul class="text-[#4B164C]">
+                                <li>Viewing pets by category</li>
+                                <li>Sorted by price</li>
+                                <li>Initiating the adoption process</li>
+                            </ul>
+                            
+                            <!-- Tech Stack -->
+                            <div class="flex gap-4 my-4">
+                                <div>HTML</div>
+                                <div>CSS (Tailwind, DaisyUI)</div>
+                                <div>JavaScript</div>
+                                <div>FontAwesome</div>
+                            </div>
+                            
+                            <!-- Buttons for Live Project and GitHub -->
+                            <div class="flex gap-4 my-4">
+                                <a href="https://assignment-six-live-repo.netlify.app" target="_blank" class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
+                                    View Live Project
+                                </a>
+                                <a href="https://github.com/Tayebasultana/pet-adoption" target="_blank" class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
+                                    GitHub Repository
+                                </a>
+                            </div>
+                            
+                            <!-- Link to View More Details -->
+                            <a class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md" href="/petProjectDetails.html">
+                                View more about this Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <!-- Contact Information Section -->
+            <div class="bg-[#DD88CF] py-16 text-white">
+                <div class="max-w-7xl mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-semibold mb-8">Contact Information</h2>
         
+                    <div class="w-full flex flex-col md:flex-row justify-center gap-12">
+                        <!-- Contact Card 1: Email -->
+                        <div class="bg-white text-[#4B164C] p-6 rounded-lg shadow-lg w-full md:w-1/3">
+                            <h3 class="text-xl font-semibold mb-4">Email</h3>
+                            <p class="text-lg">
+                                <a href="mailto:youremail@example.com" class="hover:text-[#DD88CF] transition duration-300">tayebasultana743@gmail.com</a>
+                            </p>
+                        </div>
+        
+                        <!-- Contact Card 2: Phone Number -->
+                        <div class="bg-white text-[#4B164C] p-6 rounded-lg shadow-lg w-full md:w-1/3">
+                            <h3 class="text-xl font-semibold mb-4">Phone</h3>
+                            <p class="text-lg">
+                                <a href="01771879759" class="hover:text-[#DD88CF] transition duration-300">01771879759</a>
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                        <p class="text-lg mb-4">Feel free to contact me via email or phone. I am happy to assist you with any questions or concerns you may have!</p>
+                        <a href="tayebasultana743@gmail.com" class="bg-[#4b164c] text-white py-2 px-6 rounded-full text-lg hover:bg-[#4B164C] transition duration-300">
+                            Send an Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+       
+    <!-- Footer Section -->
+    <footer class="bg-[#4B164C] text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <!-- Logo or Name -->
+            <h2 class="text-2xl font-semibold mb-4">Tayeba Sultana</h2>
+
+            <!-- Social Links -->
+            <div class="flex mt-6 space-x-6 justify-center">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/tayeba.sultana.578546" class="text-[#4B164C] hover:text-[#DD88CF] h-16">
+                    <img src="../../images/facebook_1419644.png" alt="Facebook" class="h-8 w-8 hover:scale-110 transition duration-300"/>
+                </a>
+            
+                <!-- Twitter -->
+                <a href="https://x.com/sultana_ta61837" class="text-[#4B164C] hover:text-[#DD88CF] transition duration-300">
+                    <img src="../../images/twitter_5968830.png" alt="twitter" class="h-8 w-8 hover:scale-110 transition duration-300"/>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/tayeba-sultana-sultana-b6760934b/" class="text-[#4B164C] hover:text-[#DD88CF] transition duration-300">
+                    <img src="../../images/linkedin_3536569.png" alt="linked in" class="h-8 w-8 hover:scale-110 transition duration-300"/>
+                </a>
+            </div>
+
+            <!-- Contact Information -->
+            <p class="text-lg mb-4">Feel free to reach out to me via number, email or through my social media channels.</p>
+            
+            <!-- Copyright Info -->
+            <p class="text-sm">&copy; 2025 Your Name. All rights reserved.</p>
+
+            <!-- Footer Button -->
+            <a href="#top" class="mt-4 inline-block text-[#DD88CF] hover:text-black font-bold text-lg">
+                Back to Top
+            </a>
+        </div>
+    </footer>
+        
+       
+        
+
+        <script>
+            // Toggle Drawer Visibility
+            const drawerToggle = document.getElementById('drawer-toggle');
+            const drawer = document.getElementById('drawer');
+        
+            drawerToggle.addEventListener('click', () => {
+                drawer.classList.toggle('hidden');
+            });
+        
+            // Close Drawer if clicked outside
+            drawer.addEventListener('click', (e) => {
+                if (e.target === drawer) {
+                    drawer.classList.add('hidden');
+                }
+            });
+
+
+            function setActiveLink() {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('.nav-link');
+      let currentSectionId = '';
+
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          currentSectionId = section.id;
+        }
+      });
+
+      links.forEach(link => {
+        link.classList.remove('text-blue-500', 'font-semibold');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('text-blue-500', 'font-semibold');
+        }
+      });
+    }
+
+    window.addEventListener('load', setActiveLink);
+    window.addEventListener('scroll', setActiveLink);
+        </script>
 </body>
 </html>
