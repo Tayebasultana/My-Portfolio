@@ -12,8 +12,9 @@
         <!-- Navigation Bar -->
         <nav class="flex justify-between items-center bg-[#4B164C] px-4 md:px-7 lg:px-16 py-4 shadow-lg fixed top-0 w-full z-10 opacity-80">
             <!-- Logo Section -->
-            <div class="text-white text-xl font-semibold">
-                <h3 id="logo" class="font-italic">TAYEBA</h3>
+            <div class="text-white text-xl font-semibold flex items-center gap-4">
+                <div> <img src="../../images/Screenshot 2024-09-30 064856.png" alt="" class="w-10 h-10 rounded-full"> </div>
+                <div><h3 id="logo" class="font-italic">TAYEBA</h3></div>
             </div>
         
             <!-- Navigation Links (For larger screens) -->
@@ -30,10 +31,12 @@
         
             <!-- Resume Button -->
             <div class="hidden md:block">
-                <button class="btn bg-[#F8E7F6] text-black hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
-                    Resume
-                </button>
+                <!-- Download Button for PDF -->
+                <a href="https://docs.google.com/document/d/1wOfv2YMVxXsYEXS344XMwvC5uJM2afDYj8liwuBsSNE/export?format=pdf" download="Tayeba_Sultana_Resume.pdf" class="btn bg-[#F8E7F6] text-black hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
+                    Download Resume
+                </a>
             </div>
+
 
             <!-- Hamburger Icon to Toggle Drawer (For small screens) -->
             <div class="md:hidden">
@@ -63,9 +66,10 @@
                     <li><a href="#projects" class="nav-link text-black hover:text-blue-500">Projects</a></li>
                     <li><a href="#contact" class="nav-link text-black hover:text-blue-500">Contact</a></li>
                     <li>
-                        <button class="btn bg-[#F8E7F6] text-black hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
-                            Resume
-                        </button>
+                        <!-- Download Button for PDF -->
+                        <a href="https://docs.google.com/document/d/1wOfv2YMVxXsYEXS344XMwvC5uJM2afDYj8liwuBsSNE/export?format=pdf" download="Tayeba_Sultana_Resume.pdf" class="btn bg-[#F8E7F6] text-black hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">
+                            Download Resume
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -99,7 +103,7 @@
                         </a>
                     </div>
 
-                    <button class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">Resume</button>
+                    <a href="https://docs.google.com/document/d/1wOfv2YMVxXsYEXS344XMwvC5uJM2afDYj8liwuBsSNE/export?format=pdf" download="Tayeba_Sultana_Resume.pdf" class="btn bg-[#4B164C] text-white hover:bg-[#DD88CF] transition duration-300 py-2 px-4 rounded-lg shadow-md">Resume</a>
                 </div>
             </div>
         </section>
@@ -135,6 +139,11 @@
                         </div>
                         <h3 class="text-[#4B164C] text-lg font-semibold text-center">HTML</h3>
                         <p class="text-[#4B164C] mt-2 text-center">I have experience with HTML and am learning its best practices.</p>
+                         <!-- HTML Progress Bar -->
+                        <div class="w-full mt-4 bg-gray-300 rounded-full h-2">
+                            <div class="bg-[#4B164C] h-2 rounded-full" style="width: 80%"></div>
+                        </div>
+                        <p class="text-[#4B164C] text-center mt-2">80%</p>
                     </div>
         
                     <!-- Skill 2 -->
@@ -144,6 +153,11 @@
                         </div>
                         <h3 class="text-[#4B164C] text-lg font-semibold text-center">CSS</h3>
                         <p class="text-[#4B164C] mt-2 text-center">I am learning CSS to create beautiful, responsive layouts.</p>
+                        <!-- CSS Progress Bar -->
+                        <div class="w-full mt-4 bg-gray-300 rounded-full h-2">
+                            <div class="bg-[#4B164C] h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                        <p class="text-[#4B164C] text-center mt-2">70%</p>
                     </div>
         
                     <!-- Skill 3 -->
@@ -153,6 +167,11 @@
                         </div>
                         <h3 class="text-[#4B164C] text-lg font-semibold text-center">JavaScript</h3>
                         <p class="text-[#4B164C] mt-2 text-center">Currently learning JavaScript to create interactive web pages.</p>
+                        <!-- JavaScript Progress Bar -->
+                        <div class="w-full mt-4 bg-gray-300 rounded-full h-2">
+                            <div class="bg-[#4B164C] h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                        <p class="text-[#4B164C] text-center mt-2">40%</p>
                     </div>
         
                     <!-- Skill 4 -->
@@ -162,6 +181,11 @@
                         </div>
                         <h3 class="text-[#4B164C] text-lg font-semibold text-center">React</h3>
                         <p class="text-[#4B164C] mt-2 text-center">I’m familiar with React and building single-page applications.</p>
+                        <!-- React Progress Bar -->
+                        <div class="w-full mt-4 bg-gray-300 rounded-full h-2">
+                            <div class="bg-[#4B164C] h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <p class="text-[#4B164C] text-center mt-2">75%</p>
                     </div>
                 </div>
             </div>
@@ -322,7 +346,7 @@
 
         <section id="contact">
             <!-- Contact Information Section -->
-            <div class="bg-[#DD88CF] py-16 text-white">
+            <div class="bg-[#DD88CF] py-20 text-white">
                 <div class="max-w-7xl mx-auto px-4 text-center">
                     <h2 class="text-3xl font-semibold mb-8">Contact Information</h2>
         
@@ -351,6 +375,7 @@
                             Send an Email
                         </a>
                     </div>
+                    
                 </div>
             </div>
         </section>
